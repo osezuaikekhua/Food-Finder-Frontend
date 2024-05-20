@@ -11,7 +11,7 @@ const OrderStatusHeader = ({ order }: Props) => {
     const created = new Date(order.createdAt);
 
     created.setMinutes(
-      created.getMinutes() + order.restaurant.estimatedDeliveryTime
+      created.getMinutes() + order.restaurant?.estimatedDeliveryTime
     );
 
     const hours = created.getHours();
@@ -30,9 +30,9 @@ const OrderStatusHeader = ({ order }: Props) => {
 
   return (
     <>
-      <h1 className="text-4xl font-bold tracking-tighter flex flex-col gap-5 md:flex-row md:justify-between">
-        <span> Order Status: {getOrderStatusInfo().label}</span>
-        <span> Expected by: {getExpectedDelivery()}</span>
+      <h1 className="text-4xl tracking-tighter flex flex-col gap-5 md:flex-row md:justify-between">
+        <span className="flex space-x-3"> <h2>Order Status:</h2> <h2 className=" text-orange-500 font-bold">{getOrderStatusInfo().label}</h2> </span>
+        <span className="text-3xl"> Expected by: {getExpectedDelivery()}</span>
       </h1>
       <Progress
         className="animate-pulse"

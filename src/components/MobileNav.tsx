@@ -20,7 +20,7 @@ function MobileNav() {
                         {user?.email}
                     </span>
                 ) : ( 
-                    <span>Welcome to FoodFinder!</span> 
+                    <span>Welcome to <span className="text-orange-500">FoodFinder!</span></span> 
                 )}
             </SheetTitle>
             <Separator/>

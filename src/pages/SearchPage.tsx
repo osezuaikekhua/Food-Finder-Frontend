@@ -7,6 +7,9 @@ import SearchResultInfo from "@/components/SearchResultInfo";
 import SortOptionDropdown from "@/components/SortOptionDropdown";
 import { useState } from "react";
 import { useParams } from "react-router-dom"
+import NoResults from "@/components/NoResults";
+import Loading from "@/components/Loading";
+
 
 export type SearchState = {
   searchQuery: string;
@@ -69,18 +72,17 @@ function SearchPage() {
 
 
   if (isLoading) {
-    <span>Loading ...</span>;
+    <Loading/>
   }
 
   if (!results?.data || !city) {
-    return <span>No results found</span>;
+    return <NoResults Text="No results Found"/>
   }
 
 
   return( 
     <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-5">
       <div id="cuisines-list">
-        cuisine list
         <CuisineFilter
           selectedCuisines={searchState.selectedCuisines}
           onChange={setSelectedCuisines}

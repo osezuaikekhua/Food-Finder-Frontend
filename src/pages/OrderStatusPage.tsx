@@ -2,16 +2,19 @@ import { useGetMyOrders } from "@/api/OrderApi";
 import OrderStatusDetail from "@/components/OrderStatusDetail";
 import OrderStatusHeader from "@/components/OrderStatusHeader";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Loading from "@/components/Loading";
+import NoResults from "@/components/NoResults";
+
 
 const OrderStatusPage = () => {
   const { orders, isLoading } = useGetMyOrders();
 
   if (isLoading) {
-    return "Loading...";
+    return <Loading/>
   }
 
   if (!orders || orders.length === 0) {
-    return "No orders found";
+    return <NoResults Text="No Orders Found"/>
   }
 
   return (
@@ -23,11 +26,11 @@ const OrderStatusPage = () => {
             <OrderStatusDetail order={order} /> 
             <AspectRatio ratio={16 / 5}>
               <img
-                src={order.restaurant.imageUrl}
+                src={order.restaurant?.imageUrl}
                 className="rounded-md object-cover h-full w-full"
               />
             </AspectRatio>
-          </div>
+          </div> 
         </div>
       ))}
     </div>

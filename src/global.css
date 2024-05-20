@@ -74,3 +74,11 @@
       @apply bg-background text-foreground;
     }
   }
+
+
+.center{
+  position: absolute;	
+  top: 50%;
+  left: 50%;
+  Transform: translate(-50%, -50%)
+}
