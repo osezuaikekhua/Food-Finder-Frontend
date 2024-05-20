@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Welcome to Food Finder!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Food Finder is a full stack web application. You can search restaurants based on the city or country. Sort and Filter through restaurnts
+to find what you like! Select items from the menu and proceed to checkout. You can create and manage your own restaurant. You'll get live orders from
+other users who have bought items from your menu.
 
-Currently, two official plugins are available:
+website 👉 ( https://food-finder-frontend.onrender.com/ )
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️Functionalities:
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+ - User authentication, Registration, & User Profiles
+ - Search, Sort, and Filter through Restaurants
+ - Manage your own Restaurant & Upload an Image for it
+ - Order from Restaurants, Manage your Cart & Checkout with Stripe
+ - Manage your Orders & Live Order Statuses
+ - Responsive website
+ - And other small little details....
+  
+  
+  
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🌐Technologies Used:
+1. React JS 
+2. Node
+3. MongoDB
+4. Typescipt
+5. Shadcn
+6. React Hook Form
+7. Auth0
+8. Stripe
+9. Cloudinary
+10. Render
+    
+  <h3><b>Note</b></h3>
+The Frontend and Backend for this website were deployed in seperate Repos. 
+This approach was too keep the backend and frontend decoupled, so I could scale
+them serperately. Also, when deployed they won't affect each other.
+<br>
+Backend Code & Commits 👉 ( https://github.com/osezuaikekhua/Food-Finder-Backend )
